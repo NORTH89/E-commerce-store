@@ -118,6 +118,17 @@ export const logout = async (req, res) => {
 };
 
 
+/**
+ * Refreshes the access token using a valid refresh token.
+ * 
+ * This function checks for the presence of a refresh token in the cookies.
+ * If present, it verifies the refresh token and checks against the stored
+ * token in Redis. If the tokens match, a new access token is generated and
+ * set in the response cookies. Otherwise, it returns a 401 error for an
+ * invalid or missing token.
+ * refreshed token or an error message.
+ */
+
 export const refreshToken = async (req, res) => {
 	try {
 		const refreshToken = req.cookies.refreshToken;
