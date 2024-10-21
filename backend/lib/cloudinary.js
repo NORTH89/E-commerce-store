@@ -9,8 +9,3 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
 })
 export default cloudinary
-
-
-/*************  ✨ Codeium Command ⭐  *************/
-git commit -m "added cloudinary lib"
-/******  50b97888-20f3-46aa-bc6a-1d6bcebc5283  *******/
