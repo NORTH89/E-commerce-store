@@ -2,6 +2,7 @@ import Product from '../models/product.model.js';
 import { redis } from '../lib/redis.js';
 import cloudinary from '../lib/cloudinary.js';
 
+   
 export const getProducts = async (req, res) => {
     try {
         const products = await Product.find({});
@@ -19,6 +20,7 @@ export const getProducts = async (req, res) => {
         );
     }
 };
+
 
 export const getFeaturedProducts = async (req, res) => {
     try {
