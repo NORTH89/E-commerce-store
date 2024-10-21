@@ -160,3 +160,4 @@ export const updatedFeaturedProducts = async () => {
     }
     
 }
+
