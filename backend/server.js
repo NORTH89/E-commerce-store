@@ -5,6 +5,9 @@ import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
 import productsRoutes from "./routes/ProductRoutes.js";
 import cartRoutes from "./routes/cartRoutes.js";
+import couponRoutes from "./routes/CouponRoute.js";
+
+
 
 dotenv.config();
 
@@ -18,8 +21,9 @@ app.use(cookieParser()); // allows you to parse cookies
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productsRoutes);
 app.use("/api/cart", cartRoutes);
+app.use("/api/coupons", couponRoutes);
 
 app.listen(PORT, () => {
-console.log("Server is running on http://localhost:" + PORT);
-connectDB();
+    console.log("Server is running on http://localhost:" + PORT);
+    connectDB();
 });
