@@ -23,6 +23,3 @@ app.listen(PORT, () => {
 console.log("Server is running on http://localhost:" + PORT);
 connectDB();
 });
-/*************  ✨ Codeium Command ⭐  *************/
-const gitMessage = "Implement authentication, product, and cart routes";
-/******  3d8d0570-5807-4455-a059-cd5134cb37ff  *******/
