@@ -1,13 +1,13 @@
 import express from "express";
 import dotenv from 'dotenv';
-import authRoutes from "./routes/AuthRoutes.js";
+import authRoutes from "./routes/auth-route.js";
 import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
-import productsRoutes from "./routes/ProductRoutes.js";
-import cartRoutes from "./routes/cartRoutes.js";
-import couponRoutes from "./routes/CouponRoute.js";
-
-
+import productsRoutes from "./routes/product-route.js";
+import cartRoutes from "./routes/cart-route.js";
+import couponRoutes from "./routes/coupon-route.js";
+import paymentRoutes from "./routes/payment-route.js";
+import analyticRoutes from "./routes/analytic-route.js";
 
 dotenv.config();
 
@@ -22,6 +22,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productsRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/coupons", couponRoutes);
+app.use("/api/payment", paymentRoutes);
+app.use("/api/analytics", analyticRoutes);
+
 
 app.listen(PORT, () => {
     console.log("Server is running on http://localhost:" + PORT);
