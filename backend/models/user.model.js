@@ -1,16 +1,18 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
+
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true , "Please enter a name"],
+        required: [true, "Please enter a name"],
     },
     email: {
         type: String,
         required: [true, "Please enter an email"],
         unique: true,
         lowercase: true,
-        trim: true,  
+        trim: true,
     },
     password: {
         type: String,
@@ -18,7 +20,7 @@ const userSchema = new mongoose.Schema({
         length: [8, "Password must be at least 8 characters"],
     },
     cartItems: {
-        
+
         quantity: {
             type: Number,
             default: 1,
@@ -43,7 +45,7 @@ const userSchema = new mongoose.Schema({
 
 // hashing password before saving to database
 userSchema.pre("save", async function (next) {
-    if (!this.isModified ("password")) return next();
+    if (!this.isModified("password")) return next();
 
     try {
         const salt = await bcrypt.genSalt(10);

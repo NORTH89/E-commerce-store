@@ -2,7 +2,7 @@ import express from "express";
 import {
      getProducts, getFeaturedProducts, createProduct, deleteProduct,
      getRecommendedProducts, getProductByCategory, toggleFeaturedProduct,
-} from "../controllers/productController.js";
+} from "../controllers/product-controller.js";
 import { protectRoute, adminRoute } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
