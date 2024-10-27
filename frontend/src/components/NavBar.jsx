@@ -42,7 +42,7 @@ const Navbar = () => {
                             <Link
                                 className="bg-[#6cd506] text-white rounded-md px-3 py-2 
                                 
-                                text-sm hover:bg-emerald-600 transition duration-300 ease-in-out block"
+                                text-sm hover:bg-[#6dd506d7] transition duration-300 ease-in-out block"
                             >
                                 <Lock className="inline-block mr-1" size={18} />
                                 <span className="hidden sm:inline block">Dashboard</span>
@@ -60,7 +60,7 @@ const Navbar = () => {
                             <>
                                 <Link
                                     to={"/signup"}
-                                    className='bg-[#6cd506] hover:bg-emerald-700 text-white py-2 px-4 
+                                    className='bg-[#6cd506] hover:bg-[#6dd506d7] text-white py-2 px-4 
 									rounded-md flex items-center transition duration-300 ease-in-out block'
                                 >
                                     <UserPlus className='mr-2' size={18} />
