@@ -8,12 +8,9 @@
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [API Documentation](#api-documentation)
 - [Security](#security)
 - [Caching](#caching)
 - [Payment Processing](#payment-processing)
-- [Testing](#testing)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Project Overview
